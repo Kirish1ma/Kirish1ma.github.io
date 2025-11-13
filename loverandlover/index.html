@@ -62,7 +62,7 @@
 <meta property="og:image" content="https://s2.loli.net/2025/11/12/X5zKLlOwjNuxfUV.jpg">
 <meta property="og:image" content="https://s2.loli.net/2025/11/12/Hh6SCYKNzFvklWO.jpg">
 <meta property="article:published_time" content="2025-11-11T09:52:59.000Z">
-<meta property="article:modified_time" content="2025-11-12T15:18:57.616Z">
+<meta property="article:modified_time" content="2025-11-12T17:09:05.783Z">
 <meta property="article:author" content="Kirishima">
 <meta property="article:tag" content="存在主义,加缪,萨特,哲学随笔,深度思考,自由与荒诞,存在主义焦虑">
 <meta name="twitter:card" content="summary">
@@ -435,5 +435,24 @@ body {
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 
-</body>
+<!-- hexo injector body_end start -->
+    <link rel="stylesheet" href="/lib/APlayer.min.css">
+    <div id="aplayer"></div>
+    <script src="/lib/APlayer.min.js"></script>
+  
+  <script>
+    const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    fixed: true, 
+    listFolded: true,
+    listMaxHeight: 3,
+    audio: [{
+        name: 'i hate u',
+        artist: 'casa loma orchestra',
+        url: 'https://github.com/Kirish1ma/music_online/raw/refs/heads/master/Smoke%20Rings%20-%20Casa%20Loma%20Orchestra.flac',
+        cover: 'https://s2.loli.net/2025/11/12/9ad3AGDmevbwOrn.jpg'
+    }]
+});
+  </script>
+  <!-- hexo injector body_end end --></body>
 </html>
