@@ -167,28 +167,38 @@
       ];
 
       const templates = [
-        `基於${randomChoice(philosophyWords)}的底層邏輯，我們通過${randomChoice(corporateWords)}將${randomChoice(webWords)}進行了${randomChoice(philosophyWords)}式的解構，從而達成${randomChoice(corporateWords)}的閉環。`,
-        `當${randomChoice(webWords)}過度陷入${randomChoice(corporateWords)}的怪圈，其本質是${randomChoice(philosophyWords)}對${randomChoice(webWords)}的侵蝕，這導致了${randomChoice(philosophyWords)}的全面喪失。`,
-        `我們試圖在${randomChoice(corporateWords)}的維度上，利用${randomChoice(webWords)}作為${randomChoice(corporateWords)}抓手，去對標${randomChoice(philosophyWords)}層面的${randomChoice(webWords)}沉淀。`,
-        `${randomChoice(philosophyWords)}從來不是${randomChoice(webWords)}的終點，而是在${randomChoice(corporateWords)}過程中產生的${randomChoice(philosophyWords)}褶皺，這種${randomChoice(webWords)}的異化正是${randomChoice(corporateWords)}的必然。`,
-        `${randomChoice(webWords)}的本質，就是一場關於${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}實驗。`,
-        `在${randomChoice(corporateWords)}與${randomChoice(philosophyWords)}的雙重夾擊下，${randomChoice(webWords)}正在經歷一場前所未有的${randomChoice(corporateWords)}重構。`,
-        `所有的${randomChoice(webWords)}，最終都會在${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}中找到自己的${randomChoice(philosophyWords)}宿命。`,
-        `所謂${randomChoice(corporateWords)}，其實就是${randomChoice(webWords)}在${randomChoice(philosophyWords)}維度上的${randomChoice(corporateWords)}映射。`,
+        () =>
+          `基於${randomChoice(philosophyWords)}的底層邏輯，我們通過${randomChoice(corporateWords)}將${randomChoice(webWords)}進行了${randomChoice(philosophyWords)}式的解構，從而達成${randomChoice(corporateWords)}的閉環。`,
+        () =>
+          `當${randomChoice(webWords)}過度陷入${randomChoice(corporateWords)}的怪圈，其本質是${randomChoice(philosophyWords)}對${randomChoice(webWords)}的侵蝕，這導致了${randomChoice(philosophyWords)}的全面喪失。`,
+        () =>
+          `我們試圖在${randomChoice(corporateWords)}的維度上，利用${randomChoice(webWords)}作為${randomChoice(corporateWords)}抓手，去對標${randomChoice(philosophyWords)}層面的${randomChoice(webWords)}沉淀。`,
+        () =>
+          `${randomChoice(philosophyWords)}從來不是${randomChoice(webWords)}的終點，而是在${randomChoice(corporateWords)}過程中產生的${randomChoice(philosophyWords)}褶皺，這種${randomChoice(webWords)}的異化正是${randomChoice(corporateWords)}的必然。`,
+        () =>
+          `${randomChoice(webWords)}的本質，就是一場關於${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}實驗。`,
+        () =>
+          `在${randomChoice(corporateWords)}與${randomChoice(philosophyWords)}的雙重夾擊下，${randomChoice(webWords)}正在經歷一場前所未有的${randomChoice(corporateWords)}重構。`,
+        () =>
+          `所有的${randomChoice(webWords)}，最終都會在${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}中找到自己的${randomChoice(philosophyWords)}宿命。`,
+        () =>
+          `所謂${randomChoice(corporateWords)}，其實就是${randomChoice(webWords)}在${randomChoice(philosophyWords)}維度上的${randomChoice(corporateWords)}映射。`,
       ];
 
-      function randomChoice(arr) {
+      function randomChoice(arr, last) {
+        if (arr.length === 1) return arr[0];
+
         let choice;
         do {
           choice = arr[Math.floor(Math.random() * arr.length)];
-        } while (choice === arr.lastChoice && arr.length > 1); // 如果抽到重複的就重抽，除非數組只有一個元素
-        arr.lastChoice = choice; // 存起來，下次比對
+        } while (choice === last);
+
         return choice;
       }
 
       // 生成
       function generateBlackword() {
-        return randomChoice(templates);
+        return randomChoice(templates)();
       }
 
       function translateToHuman(blackword) {
