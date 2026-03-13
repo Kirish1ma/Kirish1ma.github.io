@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <title>后现代黑话生成器</title>
+    <title>Philosophical Deconstruction</title>
     <style>
       body {
         font-family: "Microsoft YaHei", sans-serif;
@@ -182,7 +182,6 @@
         do {
           choice = arr[Math.floor(Math.random() * arr.length)];
         } while (choice === arr.lastChoice && arr.length > 1); // 如果抽到重複的就重抽，除非數組只有一個元素
-
         arr.lastChoice = choice; // 存起來，下次比對
         return choice;
       }
