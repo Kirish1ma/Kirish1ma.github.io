@@ -131,15 +131,6 @@
         "併發原語",
       ];
 
-      function randomChoice(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
-      }
-
-      // 生成黑话
-      function generateBlackword() {
-        return `在${randomChoice(philosophyWords)}与${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}中，${randomChoice(webWords)}遭遇了${randomChoice(corporateWords)}的${randomChoice(philosophyWords)}震荡，导致${randomChoice(webWords)}出现认知漂移，从而形成${randomChoice(corporateWords)}的价值共创裂隙。`;
-      }
-
       const humanTranslations = [
         "就是代碼寫爛了",
         "我也不知道我在寫什麼",
@@ -149,6 +140,22 @@
         "產品經理又改需求了",
         "其實就是加了個按鈕",
       ];
+
+      const templates = [
+        `基於${randomChoice(philosophyWords)}的底層邏輯，我們通過${randomChoice(corporateWords)}將${randomChoice(webWords)}進行了${randomChoice(philosophyWords)}式的解構，從而達成${randomChoice(corporateWords)}的閉環。`,
+        `當${randomChoice(webWords)}過度陷入${randomChoice(corporateWords)}的怪圈，其本質是${randomChoice(philosophyWords)}對${randomChoice(webWords)}的侵蝕，這導致了${randomChoice(philosophyWords)}的全面喪失。`,
+        `我們試圖在${randomChoice(corporateWords)}的維度上，利用${randomChoice(webWords)}作為${randomChoice(corporateWords)}抓手，去對標${randomChoice(philosophyWords)}層面的${randomChoice(webWords)}沉淀。`,
+        `${randomChoice(philosophyWords)}從來不是${randomChoice(webWords)}的終點，而是在${randomChoice(corporateWords)}過程中產生的${randomChoice(philosophyWords)}褶皺，這種${randomChoice(webWords)}的異化正是${randomChoice(corporateWords)}的必然。`,
+      ];
+
+      function randomChoice(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      // 生成黑话
+      function generateBlackword() {
+        return randomChoice(templates);
+      }
 
       function translateToHuman(blackword) {
         return randomChoice(humanTranslations);
