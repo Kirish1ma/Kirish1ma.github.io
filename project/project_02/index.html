@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cyber-Confession</title>
+    <style>
+      body {
+        font-family: monospace;
+        background: #0f1117;
+        color: #e6e6e6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 500px;
+        text-align: center;
+      }
+
+      textarea {
+        width: 100%;
+        height: 120px;
+        background: #161b22;
+        border: 1px solid #30363d;
+        color: #fff;
+        padding: 10px;
+        resize: none;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #238636;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .progress {
+        width: 100%;
+        height: 8px;
+        background: #30363d;
+        margin-top: 20px;
+        display: none;
+      }
+
+      .bar {
+        height: 100%;
+        width: 0%;
+        background: #2ea043;
+        transition: width 2s linear;
+      }
+
+      .message {
+        margin-top: 15px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>赛博忏悔室</h2>
+
+      <p>在这里放下你的罪,按下回车,上帝和 Git 都会原谅你</p>
+
+      <textarea id="confession" placeholder="例如：我为了早点下班写了个 hardcode..."></textarea>
+
+      <br />
+
+      <button onclick="confess()">提交</button>
+
+      <div class="progress" id="progress">
+        <div class="bar" id="bar"></div>
+      </div>
+
+      <div class="message" id="msg"></div>
+    </div>
+
+    <script>
+      function confess() {
+        const progress = document.getElementById("progress");
+        const bar = document.getElementById("bar");
+        const msg = document.getElementById("msg");
+
+        progress.style.display = "block";
+        msg.innerText = "Cleaning original sin...";
+
+        setTimeout(() => {
+          bar.style.width = "100%";
+        }, 50);
+
+        setTimeout(() => {
+          console.clear();
+
+          msg.innerText = "Absolution complete. Your sins are forgiven.";
+          document.getElementById("confession").value = "";
+
+          setTimeout(() => {
+            bar.style.width = "0%";
+            progress.style.display = "none";
+            msg.innerText = "";
+          }, 2000);
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
