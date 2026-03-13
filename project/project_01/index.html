@@ -76,8 +76,18 @@
         "熵增",
         "逻辑坍塌",
         "认知偏置",
+        "內在性",
+        "排他性",
+        "擬像",
+        "本體論",
+        "主體間性",
       ];
       const corporateWords = [
+        "降本增效",
+        "全時域",
+        "心智鎖定",
+        "維度打通",
+        "顆粒度對齊",
         "闭环",
         "赋能",
         "抓手",
@@ -129,6 +139,11 @@
         "渲染管線",
         "字節流",
         "併發原語",
+        "高可用性",
+        "冷啟動",
+        "邊緣計算",
+        "數據孤島",
+        "全棧封裝",
       ];
 
       const humanTranslations = [
@@ -137,8 +152,18 @@
         "服務器又要炸了",
         "這段代碼除了上帝沒人看得懂",
         "重構是不可能重構的",
-        "產品經理又改需求了",
         "其實就是加了個按鈕",
+        "有沒有什麽性價比 VPS 推薦阿",
+        "代碼跑不動,我在這兒編呢",
+        "這段是複製粘貼的,我也看不懂",
+        "伺服器冒煙了,快跑阿",
+        "其實就是換了個皮膚，沒啥技術含量。",
+        "我也不知道為什麼，但它就是能跑",
+        "這項目要涼，我先寫點好聽的",
+        "昨晚熬夜寫的,邏輯已經隨風而去了",
+        "簡單來說,這是一個美麗的錯誤",
+        "別看了,這段代幕後其實全是手動操作",
+        "這不是 Bug 這是藝術的崩塌",
       ];
 
       const templates = [
@@ -146,13 +171,17 @@
         `當${randomChoice(webWords)}過度陷入${randomChoice(corporateWords)}的怪圈，其本質是${randomChoice(philosophyWords)}對${randomChoice(webWords)}的侵蝕，這導致了${randomChoice(philosophyWords)}的全面喪失。`,
         `我們試圖在${randomChoice(corporateWords)}的維度上，利用${randomChoice(webWords)}作為${randomChoice(corporateWords)}抓手，去對標${randomChoice(philosophyWords)}層面的${randomChoice(webWords)}沉淀。`,
         `${randomChoice(philosophyWords)}從來不是${randomChoice(webWords)}的終點，而是在${randomChoice(corporateWords)}過程中產生的${randomChoice(philosophyWords)}褶皺，這種${randomChoice(webWords)}的異化正是${randomChoice(corporateWords)}的必然。`,
+        `${randomChoice(webWords)}的本質，就是一場關於${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}實驗。`,
+        `在${randomChoice(corporateWords)}與${randomChoice(philosophyWords)}的雙重夾擊下，${randomChoice(webWords)}正在經歷一場前所未有的${randomChoice(corporateWords)}重構。`,
+        `所有的${randomChoice(webWords)}，最終都會在${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}中找到自己的${randomChoice(philosophyWords)}宿命。`,
+        `所謂${randomChoice(corporateWords)}，其實就是${randomChoice(webWords)}在${randomChoice(philosophyWords)}維度上的${randomChoice(corporateWords)}映射。`,
       ];
 
       function randomChoice(arr) {
         return arr[Math.floor(Math.random() * arr.length)];
       }
 
-      // 生成黑话
+      // 生成
       function generateBlackword() {
         return randomChoice(templates);
       }
