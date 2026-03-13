@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>后现代黑话生成器</title>
+    <style>
+      body {
+        font-family: "Microsoft YaHei", sans-serif;
+        padding: 20px;
+        background: #f5f5f5;
+        width: 400px;
+        margin: auto;
+      }
+      .sentence {
+        margin-bottom: 20px;
+      }
+      .blackword {
+        color: #d63384;
+        font-weight: bold;
+      }
+      .humanword {
+        color: #333;
+        margin-left: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .blackdrop {
+        color: transparent;
+      }
+      .blackdrop:hover {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>后现代黑话生成器</h1>
+    <p>
+      在当下的存在性张力之中，主体与世界的二元律动不可避免地产生了非线性认知漂移；在这一漂移中，符号与意象的交错形成了自我与他者的透镜效应，而这种效应本身又被前结构化经验的潜在指涉所模糊化。我们可以说，意识的非同一性并非偶然，而是由历史生成机制与语境化认知框架的互文性张力所触发的感知裂隙，而感知裂隙本身又反向折射出社会符号资本的再生产逻辑。
+      于是，在这不断自我指涉的循环里，主体不仅被抛向荒诞，同时也被其自身意向性所约束——一种超越经验性的符号秩序悄然建立，却在微观层面持续瓦解。这种瓦解不是简单的解构，而是潜在意义的指数级泛化，它允许我们在理性与非理性、能指与所指之间游走，仿佛每一次语词的生成都同时是对文化资本的自我验证与虚空的映射。
+    </p>
+    <button onclick="generate()">生成一句黑话</button>
+    <div id="output"></div>
+    <p class="blackdrop">
+      Actually,我隻是想諷刺那些喜歡堆砌"哲學黑話"藉此證明自身"文化資本"的人,外邊深奧,邏輯模糊.大量抽象概唸疊加,專業名詞隨意引用,句子結構複雜,讓讀者感受到"深度"而不必真正理解內涵換的內容
+    </p>
+    <script>
+      const philosophyWords = [
+        "存在性",
+        "主体性",
+        "互文性",
+        "荒诞",
+        "能指",
+        "所指",
+        "意向性",
+        "前结构",
+        "非同一性",
+        "虚无",
+        "感知裂隙",
+        "符号资本",
+        "解构",
+        "先验",
+        "异化",
+        "范式",
+        "维度",
+        "悬置",
+        "解域",
+        "褶皱",
+        "微观叙事",
+        "景观",
+        "伪像",
+        "阈限空间",
+        "内卷化",
+        "熵增",
+        "逻辑坍塌",
+        "认知偏置",
+      ];
+      const corporateWords = [
+        "闭环",
+        "赋能",
+        "抓手",
+        "沉淀",
+        "场景化",
+        "生态位",
+        "战略对标",
+        "端到端",
+        "迭代优化",
+        "价值共创",
+        "底层逻辑",
+        "顶层设计",
+        "全链路",
+        "心智模型",
+        "打法",
+        "护城河",
+        "耦合",
+        "颗粒度",
+        "复用",
+        "反哺",
+        "降维打击",
+        "对齐",
+        "颗粒度",
+        "抓手",
+        "闭环",
+        "感知度",
+      ];
+      const webWords = [
+        "组件化",
+        "异步请求",
+        "前端路由",
+        "接口调用",
+        "状态管理",
+        "虚拟DOM",
+        "缓存策略",
+        "API网关",
+        "模块化",
+        "热更新",
+        "原子化",
+        "高并发",
+        "分布式",
+        "生命周期",
+        "微服務",
+        "容器化",
+        "持久化",
+        "解耦",
+        "沙盒",
+        "影子DOM",
+        "渲染管線",
+        "字節流",
+        "併發原語",
+      ];
+
+      function randomChoice(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      // 生成黑话
+      function generateBlackword() {
+        return `在${randomChoice(philosophyWords)}与${randomChoice(philosophyWords)}的${randomChoice(corporateWords)}中，${randomChoice(webWords)}遭遇了${randomChoice(corporateWords)}的${randomChoice(philosophyWords)}震荡，导致${randomChoice(webWords)}出现认知漂移，从而形成${randomChoice(corporateWords)}的价值共创裂隙。`;
+      }
+
+      const humanTranslations = [
+        "就是代碼寫爛了",
+        "我也不知道我在寫什麼",
+        "服務器又要炸了",
+        "這段代碼除了上帝沒人看得懂",
+        "重構是不可能重構的",
+        "產品經理又改需求了",
+        "其實就是加了個按鈕",
+      ];
+
+      function translateToHuman(blackword) {
+        return randomChoice(humanTranslations);
+      }
+
+      // 插入
+      function generate() {
+        const black = generateBlackword();
+        const human = translateToHuman(black);
+
+        const container = document.getElementById("output");
+        const div = document.createElement("div");
+        div.className = "sentence";
+        div.innerHTML = `<div class="blackword">${black}</div><div class="humanword">${human}</div>`;
+        container.prepend(div);
+      }
+    </script>
+  </body>
+</html>
