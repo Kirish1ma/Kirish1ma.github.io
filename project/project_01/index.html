@@ -178,7 +178,13 @@
       ];
 
       function randomChoice(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
+        let choice;
+        do {
+          choice = arr[Math.floor(Math.random() * arr.length)];
+        } while (choice === arr.lastChoice && arr.length > 1); // 如果抽到重複的就重抽，除非數組只有一個元素
+
+        arr.lastChoice = choice; // 存起來，下次比對
+        return choice;
       }
 
       // 生成
@@ -194,7 +200,6 @@
       function generate() {
         const black = generateBlackword();
         const human = translateToHuman(black);
-
         const container = document.getElementById("output");
         const div = document.createElement("div");
         div.className = "sentence";
