@@ -5,10 +5,28 @@
 	<link href="https://hylia.website/feed.xml" rel="self"/>
 	<link href="https://hylia.website/"/>
 	
+	<updated>2026-03-17T00:00:00Z</updated>
+	
 	<id>https://hylia.website</id>
 	<author>
   <name>Andy Bell</name>
   <email>hi@piccalil.li</email>
 	</author>
+	
+  
+  <entry>
+    <title>吃豆人小游戏 Pac-8 V0.4.0a</title>
+    <link href="https://hylia.website/posts/Pac-8_Museum_PUBLIC_BUILD_V0.4.0a/"/>
+    <updated>2026-03-17T00:00:00Z</updated>
+    <id>https://hylia.website/posts/Pac-8_Museum_PUBLIC_BUILD_V0.4.0a/</id>
+    <content type="html"><![CDATA[
+      <p>这是个灵感来源自 misuse8 的游戏</p>
+<p>官网地址<a href="https://hexdev-nsfw.itch.io/pac-8/devlog/1126014/pac-8-v040a-has-been-released">Pac-8 V0.4.0a has been released! - Pac-8 Museum by Hex Dev</a></p>
+<p>官网下载链接 <a href="https://hexdev-nsfw.itch.io/pac-8#download">下载</a></p>
+<p>不能访问可以试试度盘<a href="https://pan.baidu.com/s/1265g5TlipoxW8UtScFqi8Q?pwd=t437">下载</a></p>
+<p><img src="https://picui.ogmua.cn/s1/2026/03/17/69b93d6c3be29.webp" alt="1"></p>
+
+    ]]></content>
+  </entry>
 	
 </feed>
