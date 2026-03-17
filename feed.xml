@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>简单的资源站</title>
+	<subtitle></subtitle>
+	<link href="https://hylia.website/feed.xml" rel="self"/>
+	<link href="https://hylia.website/"/>
+	
+	<id>https://hylia.website</id>
+	<author>
+  <name>Andy Bell</name>
+  <email>hi@piccalil.li</email>
+	</author>
+	
+</feed>
